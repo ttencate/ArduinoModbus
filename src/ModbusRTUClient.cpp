@@ -17,6 +17,8 @@
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+#ifdef ARDUINO_MODBUS_ENABLE_RTU
+
 #include <errno.h>
 
 extern "C" {
@@ -58,3 +60,5 @@ int ModbusRTUClientClass::begin(RS485Class& rs485, unsigned long baudrate, RS485
 }
 
 ModbusRTUClientClass ModbusRTUClient;
+
+#endif

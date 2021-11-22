@@ -8,6 +8,8 @@
 #ifndef MODBUS_RTU_PRIVATE_H
 #define MODBUS_RTU_PRIVATE_H
 
+#ifdef ARDUINO_MODBUS_ENABLE_RTU
+
 #ifndef _MSC_VER
 #include <stdint.h>
 #else
@@ -81,5 +83,7 @@ typedef struct _modbus_rtu {
     /* To handle many slaves on the same link */
     int confirmation_to_ignore;
 } modbus_rtu_t;
+
+#endif
 
 #endif /* MODBUS_RTU_PRIVATE_H */

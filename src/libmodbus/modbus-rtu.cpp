@@ -5,6 +5,8 @@
  * SPDX-License-Identifier: LGPL-2.1+
  */
 
+#ifdef ARDUINO_MODBUS_ENABLE_RTU
+
 #ifdef ARDUINO
 #include <ArduinoRS485.h>
 
@@ -1407,3 +1409,5 @@ modbus_t* modbus_new_rtu(const char *device,
 
     return ctx;
 }
+
+#endif

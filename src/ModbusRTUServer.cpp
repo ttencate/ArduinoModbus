@@ -17,6 +17,8 @@
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+#ifdef ARDUINO_MODBUS_ENABLE_RTU
+
 #include <errno.h>
 
 extern "C" {
@@ -69,3 +71,5 @@ void ModbusRTUServerClass::poll()
 }
 
 ModbusRTUServerClass ModbusRTUServer;
+
+#endif

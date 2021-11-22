@@ -8,6 +8,8 @@
 #ifndef MODBUS_RTU_H
 #define MODBUS_RTU_H
 
+#ifdef ARDUINO_MODBUS_ENABLE_RTU
+
 #include "modbus.h"
 
 MODBUS_BEGIN_DECLS
@@ -44,5 +46,7 @@ MODBUS_API int modbus_rtu_get_rts_delay(modbus_t *ctx);
 #endif
 
 MODBUS_END_DECLS
+
+#endif
 
 #endif /* MODBUS_RTU_H */

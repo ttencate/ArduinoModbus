@@ -20,6 +20,8 @@
 #ifndef _MODBUS_RTU_CLIENT_H_INCLUDED
 #define _MODBUS_RTU_CLIENT_H_INCLUDED
 
+#ifdef ARDUINO_MODBUS_ENABLE_RTU
+
 #include "ModbusClient.h"
 #include <ArduinoRS485.h>
 
@@ -45,5 +47,7 @@ private:
 };
 
 extern ModbusRTUClientClass ModbusRTUClient;
+
+#endif
 
 #endif

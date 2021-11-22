@@ -20,6 +20,8 @@
 #ifndef _MODBUS_RTU_SERVER_H_INCLUDED
 #define _MODBUS_RTU_SERVER_H_INCLUDED
 
+#ifdef ARDUINO_MODBUS_ENABLE_RTU
+
 #include "ModbusServer.h"
 #include <ArduinoRS485.h>
 
@@ -51,5 +53,7 @@ private:
 };
 
 extern ModbusRTUServerClass ModbusRTUServer;
+
+#endif
 
 #endif
